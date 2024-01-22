@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 alias ls='ls --color=auto'
 alias ll='ls -lA --color=auto'
@@ -11,15 +11,9 @@ alias cd..='cd ..'
 
 alias f='lf'
 
-alias cat='bat'
-
 alias yt='ytfzf -tf'
 
 alias po='paru -Qtdq | paru -Rns -'
-
-alias netrel='sudo nmcli connection up 125BCE_plus'
-
-alias news='newsboat'
 
 alias lock='xmodmap $HOME/.config/.Xmodmap && xmodmap -e "clear lock"'
 
