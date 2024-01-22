@@ -72,7 +72,6 @@ paru -S base \
 	lazygit \
 	lf \
 	libnotify \
-	librewolf-bin \
 	libx11 \
 	libxft \
 	libxinerama \
