@@ -135,7 +135,7 @@ if [ -d "/sys/class/power_supply" ] && [ "$(ls -A /sys/class/power_supply)" ]; t
 	case $answer in
 	[Yy]*)
 		echo "Installing dependencies..."
-		yay -S acpi acpilight
+		paru -S acpi acpilight
 		sudo chown "$USER" /sys/class/backlight/intel_backlight/brightness
 		sleep 1 && clear
 		echo "Want to enable touchpad tap-to-click? (y/n)"
