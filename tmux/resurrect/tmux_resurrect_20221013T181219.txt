@@ -1,0 +1,5 @@
+pane	2	1	0	:-	1	Ghidorah	:/home/geko	1	nmtui	:nmtui
+pane	2	2	1	:*	1	Ghidorah	:/home/geko/Downloads/kek	1	zsh	:
+window	2	1	:nmtui	0	:-	b7a2,229x61,0,0,5	:
+window	2	2	:zsh	1	:*	b7a3,229x61,0,0,6	:
+state	2	

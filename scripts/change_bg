@@ -1,0 +1,4 @@
+#!/bin/bash
+
+walls="/home/geko/Images/Wallpapers/"
+/sbin/xwallpaper --stretch ${walls}/$(ls ${walls}|shuf -n 1)

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+alias ls='ls --color=auto'
+alias ll='ls -lA --color=auto'
+alias grep='grep --color=auto'
+
+alias v='nvim'
+alias vim='nvim'
+
+alias cd..='cd ..'
+
+alias f='lf'
+
+alias cat='bat'
+
+alias yt='ytfzf -tf'
+
+alias po='paru -Qtdq | paru -Rns -'
+
+alias netrel='sudo nmcli connection up 125BCE_plus'
+
+alias news='newsboat'
+
+alias lock='xmodmap $HOME/.config/.Xmodmap && xmodmap -e "clear lock"'
+
+alias di='docker images'
+alias dps='docker ps -a'
+alias dcp='docker container prune'
+alias dip='docker image prune'
+
+alias gs='git status'
+alias gp='git push'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

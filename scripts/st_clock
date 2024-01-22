@@ -1,0 +1,5 @@
+#!/bin/bash
+
+clock=$(date '+%l:%M %p')
+
+echo "$clock "

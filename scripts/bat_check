@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $(cat /sys/class/power_supply/BAT1/status) == "Charging" ] && [ $(cat /sys/class/power_supply/BAT1/capacity) -gt "95" ]; then
+	notify-send "Battery status" "Battery full"
+elif [ $(cat /sys/class/power_supply/BAT1/status) != "Charging" ] && [ $(cat /sys/class/power_supply/BAT1/capacity) -lt "20" ]; then
+	notify-send "Battery status" "Battery low"
+fi

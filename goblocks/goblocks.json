@@ -1,0 +1,49 @@
+{
+	"separator": " | ",
+	"actions":
+	[
+		{
+			"updateSignal": "39",
+			"command": "(sleep 5 ; curl \"wttr.in\/Maribor?format=3\")",
+			"timer": "45m"
+		},
+		{
+			"prefix": "🔋 ",
+			"updateSignal": "40",
+			"command": "(cat /sys/class/power_supply/BAT1/capacity)",
+			"suffix": "%",
+			"timer": "5m"
+		},
+		{
+			"prefix": "🔊 ",
+			"updateSignal": "36",
+			"command": "(pactl get-sink-volume $(pactl list short | grep RUNNING | sed -e 's,^\\([0-9][0-9]*\\)[^0-9].*,\\1,' | head -n 1) | awk '{print $5}' | head -n 1)",
+			"timer": "0"
+		},
+		{
+			"prefix": "Mem: ",
+			"updateSignal": "37",
+			"command": "#Memory",
+			"suffix": "%",
+			"format": "%.2f",
+			"timer": "15s"
+		},
+		{
+			"prefix": "CPU: ",
+			"updateSignal": "38",
+			"command": "#Cpu",
+			"suffix": "%",
+			"format": "%.2f",
+			"timer": "15s"
+		},
+		{
+			"prefix": " ",
+			"updateSignal": "35",
+			"command": "#Date",
+			"format": "Monday 02/01/2006 15:04",
+			"suffix": " ",
+			"timer": "60s"
+		}
+	]
+
+}

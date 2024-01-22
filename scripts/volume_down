@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/usr/bin/pactl set-sink-volume $(pactl list short | grep RUNNING | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | head -n 1) -5%; kill -36 $(pidof goblocks)
