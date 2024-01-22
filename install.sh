@@ -72,7 +72,6 @@ paru -S base \
 	lazygit \
 	lf \
 	libnotify \
-	libnotify \
 	librewolf-bin \
 	libx11 \
 	libxft \
@@ -83,7 +82,6 @@ paru -S base \
 	make \
 	man-db \
 	man-pages \
-	mpv \
 	mpv \
 	ncdu \
 	neofetch \
