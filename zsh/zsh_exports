@@ -9,6 +9,10 @@ export BROWSER="firefox"
 #eval $(ssh-agent)
 #ssh-add ~/.ssh/id_ghidorah_rsa
 
+HISTFILE=~/.cache/histfile
+HISTSIZE=500
+SAVEHIST=500
+
 export LF_ICONS="\
 tw=:\
 st=:\
@@ -171,9 +175,3 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
-
-HISTFILE=~/.cache/histfile
-HISTSIZE=500
-SAVEHIST=500
-
-source /usr/share/nvm/init-nvm.sh
