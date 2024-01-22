@@ -188,9 +188,9 @@ fi
 # Home setup
 #########################
 
-DIRECTORIES=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
+SUCKLESS=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
 PROGRAMS="dunst lf tmux zsh"
-for directory in $DIRECTORIES; do
+for directory in $SUCKLESS; do
 	[ ! -d "$HOME/$directory" ] && mkdir "$HOME/$directory"
 done
 
@@ -247,18 +247,12 @@ sleep 1 && clear
 
 case $answer in
 [Yy]*)
-	git clone --depth 1 https://github.com/Gekko-Geko/dwm.git "$HOME"/.config/dwm
-	cd "$HOME"/.config/dwm || exit
-	sudo make clean install
-	git clone --depth 1 https://github.com/Gekko-Geko/dmenu.git "$HOME"/.config/dmenu
-	cd "$HOME"/.config/dmenu || exit
-	sudo make clean install
-	git clone --depth 1 https://github.com/Gekko-Geko/st.git "$HOME"/.config/st
-	cd "$HOME"/.config/st || exit
-	sudo make clean install
-	git clone --depth 1 https://github.com/Gekko-Geko/dwmblocks.git "$HOME"/.config/dwmblocks
-	cd "$HOME"/.config/dwmblocks || exit
-	sudo make clean install
+	SUCKLESS="dwm dmenu st dwmblocks"
+	for program in $SUCKLESS; do
+		git clone --depth 1 "https://github.com/Gekko-Geko/$program.git" "$HOME/.config/$program"
+		cd "$HOME/.config/$program" || exit
+		sudo make clean install
+	done
 	sleep 1 && clear
 	;;
 [Nn]*)
