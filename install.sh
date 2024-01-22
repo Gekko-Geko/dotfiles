@@ -180,14 +180,15 @@ fi
 #########################
 
 SUCKLESS=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
-PROGRAMS="dunst lf tmux zsh"
 for directory in $SUCKLESS; do
 	[ ! -d "$HOME/$directory" ] && mkdir "$HOME/$directory"
 done
 
+PROGRAMS="dunst lf tmux zsh"
 for program in $PROGRAMS; do
 	DIR="$HOME/.config/$program"
 	if [ ! -d "$DIR" ]; then
+		mkdir -p "$DIR"
 		cp -r "./$program" "$DIR"
 	fi
 done
