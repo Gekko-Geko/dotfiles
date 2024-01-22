@@ -217,6 +217,7 @@ case $answer in
 [Yy]*)
 	sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee /etc/X11/xorg.conf.d/91-keyboard.conf <<'EOF' 1>/dev/null
 Section "InputClass"
+  Identifier "system-keyboard"
   MatchIsKeyboard "on"
   Option "XkbOptions" "caps:escape"
 EndSection
