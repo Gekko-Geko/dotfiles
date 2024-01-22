@@ -121,12 +121,13 @@ paru -S base \
 	zip \
 	zsh \
 	--noconfirm
-sleep 1 && clear
 
 sudo systemctl enable ly
 sudo systemctl enable docker
 sudo systemctl enable sshd
 sudo systemctl enable rsyslog
+
+sleep 1 && clear
 
 #########################
 # Laptop setup
