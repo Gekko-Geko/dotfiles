@@ -188,23 +188,22 @@ fi
 # Home setup
 #########################
 
-DIRECTRIES=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
+DIRECTORIES=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
 PROGRAMS="dunst lf tmux zsh"
-for directory in $DIRECTRIES; do
+for directory in $DIRECTORIES; do
 	[ ! -d "$HOME/$directory" ] && mkdir "$HOME/$directory"
 done
 
 for program in $PROGRAMS; do
 	DIR="$HOME/.config/$program"
 	if [ ! -d "$DIR" ]; then
-		mkdir "$DIR"
-		cp -r "$program/*" "$DIR"
+		cp -r "./$program" "$DIR"
 	fi
 done
 
 cp ./xinit/.xinitrc "$HOME/"
 cp ./zsh/.zshenv "$HOME/"
-cp ./scripts/* "/usr/bin/"
+sudo cp ./scripts/* "/usr/bin/"
 cp -r ./.cache/wal "$HOME/.cache/"
 git clone --depth 1 https://github.com/LazyVim/starter "$HOME/.config/nvim"
 rm -rf "$HOME/.config/nvim/.git"
