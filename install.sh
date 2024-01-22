@@ -179,8 +179,8 @@ fi
 # Home setup
 #########################
 
-SUCKLESS=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
-for directory in $SUCKLESS; do
+DIRECTORIES=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
+for directory in $DIRECTORIES; do
 	[ ! -d "$HOME/$directory" ] && mkdir "$HOME/$directory"
 done
 
