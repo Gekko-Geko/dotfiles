@@ -256,6 +256,9 @@ case $answer in
 	git clone --depth 1 https://github.com/Gekko-Geko/st.git "$HOME"/.config/st
 	cd "$HOME"/.config/st || exit
 	sudo make clean install
+	git clone --depth 1 https://github.com/Gekko-Geko/dwmblocks.git "$HOME"/.config/dwmblocks
+	cd "$HOME"/.config/dwmblocks || exit
+	sudo make clean install
 	sleep 1 && clear
 	;;
 [Nn]*)
