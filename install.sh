@@ -161,24 +161,15 @@ EOF
 			sleep 1 && clear
 			;;
 
-		[Nn]*)
-			echo "Skipping..."
-			sleep 1 && clear
-			;;
-
 		*)
-			echo "Invalid answer, skipping..."
+			echo "Skipping..."
 			sleep 1 && clear
 			;;
 		esac
 		;;
 
-	[Nn]*)
-		echo "Skipping..."
-		sleep 1 && clear
-		;;
 	*)
-		echo "Invalid answer, skipping..."
+		echo "Skipping..."
 		sleep 1 && clear
 		;;
 	esac
@@ -223,12 +214,8 @@ EndSection
 EOF
 	sleep 1 && clear
 	;;
-[Nn]*)
-	echo "Skipping..."
-	sleep 1 && clear
-	;;
 *)
-	echo "Invalid answer, skipping..."
+	echo "Skipping..."
 	sleep 1 && clear
 	;;
 esac
@@ -255,12 +242,8 @@ case $answer in
 	done
 	sleep 1 && clear
 	;;
-[Nn]*)
-	echo "Skipping..."
-	sleep 1 && clear
-	;;
 *)
-	echo "Invalid answer, skipping..."
+	echo "Skipping..."
 	sleep 1 && clear
 	;;
 esac
