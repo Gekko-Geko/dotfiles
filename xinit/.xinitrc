@@ -1,12 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.config/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-eval $(ssh-agent)
-ssh-add ~/.ssh/id_ghidorah_rsa
+# eval $(ssh-agent)
+# ssh-add ~/.ssh/id_ghidorah_rsa
 
 # merge in defaults and keymaps
 if [ -f $sysresources ]; then
@@ -44,7 +44,6 @@ xmodmap -e 'clear lock' &
 xwallpaper --stretch ~/Pictures/Wallpapers/$(ls ~/Pictures/Wallpapers| shuf -n 1)
 picom -b &
 brillo -S 10 &
-#goblocks &!
 dwmblocks &!
 xset r rate 200 25&
 
