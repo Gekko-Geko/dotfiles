@@ -41,7 +41,7 @@ else
 fi
 
 xmodmap -e 'clear lock' &
-xwallpaper --stretch ~/Images/Wallpapers/$(ls ~/Images/Wallpapers| shuf -n 1)
+xwallpaper --stretch ~/Pictures/Wallpapers/$(ls ~/Pictures/Wallpapers| shuf -n 1)
 picom -b &
 brillo -S 10 &
 #goblocks &!
