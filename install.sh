@@ -43,7 +43,7 @@ echo "Installing paru..."
 git clone https://aur.archlinux.org/paru.git /tmp/paru
 cd /tmp/paru || exit
 makepkg -si
-cd -
+cd - || exit
 sleep 1 && clear
 
 echo "Installing programs..."
