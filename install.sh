@@ -43,6 +43,7 @@ echo "Installing paru..."
 git clone https://aur.archlinux.org/paru.git /tmp/paru
 cd /tmp/paru || exit
 makepkg -si
+cd -
 sleep 1 && clear
 
 echo "Installing programs..."
@@ -188,8 +189,7 @@ PROGRAMS="dunst lf tmux zsh"
 for program in $PROGRAMS; do
 	DIR="$HOME/.config/$program"
 	if [ ! -d "$DIR" ]; then
-		mkdir -p "$DIR"
-		cp -r "./$program" "$DIR"
+		cp -r "$(pwd)/$program" "$HOME/.config"
 	fi
 done
 
@@ -236,9 +236,9 @@ sleep 1 && clear
 case $answer in
 [Yy]*)
 	SUCKLESS="dwm dmenu st dwmblocks"
-	for program in $SUCKLESS; do
-		git clone --depth 1 "https://github.com/Gekko-Geko/$program.git" "$HOME/.config/$program"
-		cd "$HOME/.config/$program" || exit
+	for suck in $SUCKLESS; do
+		git clone --depth 1 "https://github.com/Gekko-Geko/$suck.git" "$HOME/.config/$suck"
+		cd "$HOME/.config/$suck" || exit
 		sudo make clean install
 	done
 	sleep 1 && clear
