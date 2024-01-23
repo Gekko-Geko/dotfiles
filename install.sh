@@ -8,7 +8,6 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 USER=$(whoami)
-PATH=$(pwd)
 
 clear
 echo "                                  _____________                                     "
@@ -44,7 +43,7 @@ echo "Installing paru..."
 git clone https://aur.archlinux.org/paru.git /tmp/paru
 cd /tmp/paru || exit
 makepkg -si
-cd "$PATH" || exit
+cd - || exit
 sleep 1 && clear
 
 echo "Installing programs..."
