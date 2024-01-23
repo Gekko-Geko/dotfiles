@@ -42,10 +42,12 @@ sleep 1 && clear
 echo "Installing paru..."
 git clone https://aur.archlinux.org/paru.git /tmp/paru
 cd /tmp/paru || exit
-makepkg -si
+makepkg -si --noconfirm
 cd - || exit
 sleep 1 && clear
 
+echo "Update repositories..."
+paru -Syyu --noconfirm
 echo "Installing programs..."
 paru -S base \
 	base-devel \
