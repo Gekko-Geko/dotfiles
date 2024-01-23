@@ -36,9 +36,6 @@ echo ""
 # Install programs
 #########################
 
-echo "Installing programs..."
-sleep 1 && clear
-
 echo "Installing paru..."
 git clone https://aur.archlinux.org/paru.git /tmp/paru
 cd /tmp/paru || exit
@@ -48,6 +45,9 @@ sleep 1 && clear
 
 echo "Update repositories..."
 paru -Syyu --noconfirm
+cd - || exit
+sleep 1 && clear
+
 echo "Installing programs..."
 paru -S base \
 	base-devel \
