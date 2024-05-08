@@ -21,7 +21,14 @@ alias di='docker images'
 alias dps='docker ps -a'
 alias dcp='docker container prune'
 alias dip='docker image prune'
+alias dio='docker rmi $(docker images -f dangling=true -q)'
+alias dcu='docker compose down -v && docker compose build && docker rmi $(docker images -qf dangling=true) || true && docker compose up -d'
+alias dcul='docker compose down -v && docker compose build && docker rmi $(docker images -qf dangling=true) || true && docker compose up -d && docker compose logs -f'
 
 alias gs='git status'
 alias gp='git push'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+alias ffs='sudo /bin/zsh -c "$(fc -ln -1)"'
+
+alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
