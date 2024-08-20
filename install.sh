@@ -122,6 +122,7 @@ paru -S base \
 	zathura-pdf-mupdf \
 	zip \
 	zsh \
+        zsh-theme-powerlevel10k-git \
 	--noconfirm
 
 sudo systemctl enable ly
