@@ -64,7 +64,6 @@ paru -S base \
 	docker-compose \
 	dos2unix \
 	dunst \
-	exa \
 	ffmpeg \
 	ffmpegthumbnailer \
 	firefox \
@@ -79,6 +78,7 @@ paru -S base \
 	libxft \
 	libxinerama \
 	linux-headers \
+ 	lsd \
 	ly \
 	maim \
 	make \
@@ -106,6 +106,7 @@ paru -S base \
 	sxiv \
 	syncthing \
 	tmux \
+ 	tmux-plugin-manager \
 	tree \
 	ttf-font-awesome \
 	ttf-hack \
