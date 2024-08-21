@@ -201,8 +201,7 @@ cp ./xinit/.xinitrc "$HOME/"
 cp ./zsh/.zshenv "$HOME/"
 sudo cp ./scripts/* "/usr/bin/"
 cp -r ./.cache/wal "$HOME/.cache/"
-git clone --depth 1 https://github.com/LazyVim/starter "$HOME/.config/nvim"
-rm -rf "$HOME/.config/nvim/.git"
+git clone --depth 1 https://github.com/Gekko-Geko/nvim-starter "$HOME/.config/nvim"
 
 echo "Switch capslock and escape keys? (y/n)"
 read -r answer
