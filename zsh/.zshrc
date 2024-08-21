@@ -18,6 +18,8 @@ stty -ixon
 bindkey -v
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^[." insert-last-word
+bindkey "^[_" insert-last-word
 bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 bindkey -s '^o' 'lfcd\n'
