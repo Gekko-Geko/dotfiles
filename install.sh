@@ -72,6 +72,7 @@ paru -S atac \
 	fzf \
 	gd \
 	git \
+	github-cli \
 	gnu-free-fonts \
 	lazygit \
 	lf \
