@@ -49,8 +49,10 @@ cd - || exit
 sleep 1 && clear
 
 echo "Installing programs..."
-paru -S base \
+paru -S atac \
+	base \
 	base-devel \
+ 	bat \
 	blueman \
 	bluez-tools \
 	bluez-utils \
