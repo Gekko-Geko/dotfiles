@@ -188,7 +188,7 @@ fi
 # Home setup
 #########################
 
-DIRECTORIES=".cache .config .local Desktop Downloads Doxuments Music Pictures Videos"
+DIRECTORIES=".cache .config .local Desktop Downloads Documents Music Pictures Videos"
 for directory in $DIRECTORIES; do
 	[ ! -d "$HOME/$directory" ] && mkdir "$HOME/$directory"
 done
