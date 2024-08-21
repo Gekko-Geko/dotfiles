@@ -92,6 +92,7 @@ paru -S base \
 	noto-fonts \
 	noto-fonts-cjk \
 	noto-fonts-emoji \
+ 	npm \
 	openssh \
 	openvpn \
 	pcmanfm \
