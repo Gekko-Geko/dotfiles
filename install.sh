@@ -102,6 +102,7 @@ paru -S base \
 	python-pip \
 	ripgrep \
 	rsyslog \
+	rsync \
 	runelite \
 	skippy-xd-git \
 	sxiv \
